@@ -134,5 +134,6 @@ body
           span.field #{level.studyType} in #{level.area},
           | &nbsp;
           span.school #{level.institution}
-          | &nbsp;
-          span.time #{level.startDate.split('-')[0]}&hairsp;&ndash;&hairsp;#{level.endDate.split('-')[0]}
+          if level.startDate && level.endDate
+            | &nbsp;
+            span.time #{level.startDate.split('-')[0]}&hairsp;&ndash;&hairsp;#{level.endDate.split('-')[0]}
